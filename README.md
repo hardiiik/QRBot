@@ -5,11 +5,8 @@
 [![License](https://img.shields.io/cocoapods/l/QRBot.svg?style=flat)](https://cocoapods.org/pods/QRBot)
 [![Platform](https://img.shields.io/cocoapods/p/QRBot.svg?style=flat)](https://cocoapods.org/pods/QRBot)
 
-## Example
-
-To run the example project, clone the repo, and run `pod install` from the Example directory first.
-
 ## Requirements
+
 `iOS 8+`
 
 ## Installation
@@ -22,8 +19,41 @@ pod 'QRBot'
 ```
 
 ## Usage
+Follow the steps to use QRBot:
 1. You need to give permission to access Camera in `Info.plist`.
+
 ![Info.plist permission](QRBot/Assets/Info_plist.png)
+
+2. Make `QRCodeScannerViewController` superclass of your ViewController class.
+For example, ` class YourViewController: QRCodeScannerViewController { ... } `.
+
+3. Conform/ Implement `QRCodeScannerDelegate` protocol and implement its method to perform your tasks.
+
+```swift
+ extension YourViewController: QRCodeScannerDelegate{
+    func scanner(_ connection: AVCaptureConnection, didOutput data: String) {
+        print("DemoApp : Data from QR Code - \(data)")
+        // Perform your actions here with data from QRCode
+    }
+ }
+```
+4. Set `scannerDelegate` property of your ViewController to `self`.
+
+```swift
+class ViewController: QRCodeScannerViewController {
+
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        scannerDelegate = self
+    }
+ }
+```
+5. All set. Now implement your tasks in delegate method.
+
+## Example
+
+Take a look at Example Project for more clarity. To run the example project, clone the repo, and run `pod install` from the Example directory first.
+
 ## Author
 
 Hardik Trivedi, hardiktrivedi3008.ht@gmail.com
