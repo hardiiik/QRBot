@@ -11,7 +11,8 @@ language: swift  #1
 osx_image: xcode9.2 #2
 xcode_workspace: Example/QRBot.xcworkspace #3
 xcode_scheme: QRBot-Example #4
-xcode_sdk: iphonesimulator11.2 #5
+xcode_destination: platform=iOS Simulator,OS=11.2,name=iPhone X
+#xcode_sdk: iphonesimulator11.2 #5
 
 #script:
 #- set -o pipefail && xcodebuild test -enableCodeCoverage YES -workspace Example/QRBot.xcworkspace -scheme QRBot-Example -sdk iphonesimulator11.2 ONLY_ACTIVE_ARCH=NO | xcpretty
