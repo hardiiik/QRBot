@@ -38,13 +38,40 @@ Follow the steps to use QRBot:
 3. Conform/ Implement `QRCodeScannerDelegate` protocol and implement its method to perform your tasks.
 
 ```swift
- extension YourViewController: QRCodeScannerDelegate{
+ class ViewController: QRCodeScannerViewController {
+
+    override func viewDidLoad() {
+        super.viewDidLoad()
+    }
+ }
+ extension ViewController: QRCodeScannerDelegate{
     func scanner(_ connection: AVCaptureConnection, didOutput data: String) {
         print("DemoApp : Data from QR Code - \(data)")
         // Perform your actions here with data from QRCode
     }
  }
 ```
+( If `AVCaptureConnection` may show any error, just import `AVFoundation` in your ViewController. )
+
+```swift
+ import UIKit
+ import AVFoundation
+ import QRBot
+ 
+ class ViewController: QRCodeScannerViewController {
+
+    override func viewDidLoad() {
+        super.viewDidLoad()
+    }
+ }
+ extension ViewController: QRCodeScannerDelegate{
+    func scanner(_ connection: AVCaptureConnection, didOutput data: String) {
+        print("DemoApp : Data from QR Code - \(data)")
+        // Perform your actions here with data from QRCode
+    }
+ }
+```
+
 4. Set `scannerDelegate` property of your ViewController to `self`.
 
 ```swift
