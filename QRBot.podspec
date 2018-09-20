@@ -26,7 +26,7 @@ Pod::Spec.new do |s|
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
   s.author           = { 'Hardik Trivedi' => 'hardiktrivedi3008.ht@gmail.com' }
   s.source           = { :git => 'https://github.com/hardiiik/QRBot.git', :tag => s.version.to_s }
-  # s.social_media_url = 'https://twitter.com/HardikTrivedi_D'
+  s.social_media_url = 'https://twitter.com/@HardikTrivedi_D'
 
   s.ios.deployment_target = '8.0'
   s.swift_version = '4.0'
