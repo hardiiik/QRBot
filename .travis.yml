@@ -9,7 +9,7 @@
 # - pod install --project-directory=Example
 language: swift  #1
 osx_image: xcode9.2 #2
-xcode_project: _Pod.xcodeproj #3
+xcode_workspace: Example/QRBot.xcworkspace #3
 xcode_scheme: QRBot #4
 xcode_sdk: iphonesimulator11.2 #5
 
