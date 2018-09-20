@@ -10,7 +10,7 @@ import UIKit
 import QRBot
 import AVFoundation
 
-class ViewController: QRCodeScannerViewController {
+class ScanQRCodeViewController: QRCodeScannerViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -20,7 +20,7 @@ class ViewController: QRCodeScannerViewController {
 
 }
 
-extension ViewController: QRCodeScannerDelegate{
+extension ScanQRCodeViewController: QRCodeScannerDelegate{
     func scanner(_ connection: AVCaptureConnection, didOutput data: String) {
         print("DemoApp : Data from QR Code - \(data)")
         // Perform your actions here with data from QRCode

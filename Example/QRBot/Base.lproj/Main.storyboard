@@ -1,18 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="vXZ-lx-hvc">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="zWw-Kn-BYH">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Demo View Controller-->
         <scene sceneID="ufC-wZ-h7g">
             <objects>
-                <viewController id="vXZ-lx-hvc" customClass="ViewController" customModule="QRBot_Example" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="vXZ-lx-hvc" customClass="DemoViewController" customModule="QRBot_Example" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="jyV-Pf-zRb"/>
                         <viewControllerLayoutGuide type="bottom" id="2fi-mo-0CV"/>
@@ -20,11 +21,146 @@
                     <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uIq-i9-nbH">
+                                <rect key="frame" x="-0.5" y="265" width="375" height="37"/>
+                                <state key="normal" title="Scan QR Code"/>
+                                <connections>
+                                    <segue destination="TP3-GH-xfI" kind="show" id="XUi-SU-UjM"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="p8b-zZ-kHm">
+                                <rect key="frame" x="0.0" y="315" width="375" height="37"/>
+                                <state key="normal" title="Generate QR Code"/>
+                                <connections>
+                                    <segue destination="36J-HU-UZk" kind="show" id="frD-VA-fSI"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="p8b-zZ-kHm" firstAttribute="height" secondItem="kh9-bI-dsS" secondAttribute="height" multiplier="0.055" id="1XT-xF-htC"/>
+                            <constraint firstItem="uIq-i9-nbH" firstAttribute="width" secondItem="kh9-bI-dsS" secondAttribute="width" id="8Ve-CT-oMb"/>
+                            <constraint firstItem="uIq-i9-nbH" firstAttribute="centerX" secondItem="kh9-bI-dsS" secondAttribute="centerX" id="9lM-SI-Dju"/>
+                            <constraint firstItem="p8b-zZ-kHm" firstAttribute="centerX" secondItem="kh9-bI-dsS" secondAttribute="centerX" id="JSg-lG-RXS"/>
+                            <constraint firstItem="uIq-i9-nbH" firstAttribute="height" secondItem="kh9-bI-dsS" secondAttribute="height" multiplier="0.055" id="MWX-h6-QYV"/>
+                            <constraint firstItem="uIq-i9-nbH" firstAttribute="centerY" secondItem="kh9-bI-dsS" secondAttribute="centerY" multiplier="0.85" id="Q3t-sA-CWT"/>
+                            <constraint firstItem="p8b-zZ-kHm" firstAttribute="width" secondItem="kh9-bI-dsS" secondAttribute="width" id="sTI-ye-0jn"/>
+                            <constraint firstItem="p8b-zZ-kHm" firstAttribute="centerY" secondItem="kh9-bI-dsS" secondAttribute="centerY" id="tiq-U9-Yhh"/>
+                        </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="4IY-gy-mxh"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="796" y="118.29085457271366"/>
+        </scene>
+        <!--GenerateQR Code View Controller-->
+        <scene sceneID="b08-0d-DVP">
+            <objects>
+                <viewController id="36J-HU-UZk" customClass="GenerateQRCodeViewController" customModule="QRBot_Example" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Bj0-nV-Osy"/>
+                        <viewControllerLayoutGuide type="bottom" id="I46-ti-NBj"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="adN-Gs-wHm">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Type here..." textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Ioi-Pu-amL">
+                                <rect key="frame" x="47" y="81.5" width="281" height="37"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iot-Ok-CM3">
+                                <rect key="frame" x="93.5" y="131.5" width="187.5" height="37"/>
+                                <state key="normal" title="Generate QR Code"/>
+                                <connections>
+                                    <action selector="generateQRCode:" destination="36J-HU-UZk" eventType="touchUpInside" id="KCP-MN-v1I"/>
+                                </connections>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="1EK-8f-Tcr">
+                                <rect key="frame" x="37.5" y="200.5" width="300" height="266.5"/>
+                            </imageView>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="fQW-z2-DPE">
+                                <rect key="frame" x="177" y="323" width="20" height="20"/>
+                            </activityIndicatorView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dSd-jp-E8r">
+                                <rect key="frame" x="56.5" y="482" width="262.5" height="37"/>
+                                <state key="normal" title="Generate Colored QR Code"/>
+                                <connections>
+                                    <action selector="generateColoringQRCode:" destination="36J-HU-UZk" eventType="touchUpInside" id="YoL-GZ-1m2"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="Ioi-Pu-amL" firstAttribute="centerY" secondItem="adN-Gs-wHm" secondAttribute="centerY" multiplier="0.3" id="73O-dW-anC"/>
+                            <constraint firstItem="iot-Ok-CM3" firstAttribute="centerY" secondItem="adN-Gs-wHm" secondAttribute="centerY" multiplier="0.45" id="9Gd-GG-SLs"/>
+                            <constraint firstItem="iot-Ok-CM3" firstAttribute="width" secondItem="adN-Gs-wHm" secondAttribute="width" multiplier="0.5" id="AsD-ri-xa1"/>
+                            <constraint firstItem="Ioi-Pu-amL" firstAttribute="width" secondItem="adN-Gs-wHm" secondAttribute="width" multiplier="0.75" id="CZX-k8-Tfr"/>
+                            <constraint firstItem="1EK-8f-Tcr" firstAttribute="centerX" secondItem="adN-Gs-wHm" secondAttribute="centerX" id="FzU-5n-rWl"/>
+                            <constraint firstItem="1EK-8f-Tcr" firstAttribute="width" secondItem="adN-Gs-wHm" secondAttribute="width" multiplier="0.8" id="Ibi-kC-Saw"/>
+                            <constraint firstItem="1EK-8f-Tcr" firstAttribute="height" secondItem="adN-Gs-wHm" secondAttribute="height" multiplier="0.4" id="Ig4-0S-Zxu"/>
+                            <constraint firstItem="fQW-z2-DPE" firstAttribute="centerY" secondItem="1EK-8f-Tcr" secondAttribute="centerY" id="Ijs-cu-OhS"/>
+                            <constraint firstItem="Ioi-Pu-amL" firstAttribute="height" secondItem="adN-Gs-wHm" secondAttribute="height" multiplier="0.055" id="Ofj-i4-lk9"/>
+                            <constraint firstItem="dSd-jp-E8r" firstAttribute="width" secondItem="adN-Gs-wHm" secondAttribute="width" multiplier="0.7" id="Sao-I2-GdG"/>
+                            <constraint firstItem="iot-Ok-CM3" firstAttribute="centerX" secondItem="adN-Gs-wHm" secondAttribute="centerX" id="dCO-43-sSM"/>
+                            <constraint firstItem="dSd-jp-E8r" firstAttribute="height" secondItem="adN-Gs-wHm" secondAttribute="height" multiplier="0.055" id="fy3-CG-0ng"/>
+                            <constraint firstItem="fQW-z2-DPE" firstAttribute="centerX" secondItem="1EK-8f-Tcr" secondAttribute="centerX" id="gdx-WV-M8B"/>
+                            <constraint firstItem="iot-Ok-CM3" firstAttribute="height" secondItem="adN-Gs-wHm" secondAttribute="height" multiplier="0.055" id="h2o-Xl-OaK"/>
+                            <constraint firstItem="Ioi-Pu-amL" firstAttribute="centerX" secondItem="adN-Gs-wHm" secondAttribute="centerX" id="k2z-Ts-d3w"/>
+                            <constraint firstItem="1EK-8f-Tcr" firstAttribute="centerY" secondItem="adN-Gs-wHm" secondAttribute="centerY" id="ygw-BS-jsS"/>
+                            <constraint firstItem="dSd-jp-E8r" firstAttribute="centerY" secondItem="adN-Gs-wHm" secondAttribute="centerY" multiplier="1.5" id="ylw-Vn-ozR"/>
+                            <constraint firstItem="dSd-jp-E8r" firstAttribute="centerX" secondItem="adN-Gs-wHm" secondAttribute="centerX" id="zH9-Un-yYO"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="activityView" destination="fQW-z2-DPE" id="AuD-ex-2L9"/>
+                        <outlet property="imageView" destination="1EK-8f-Tcr" id="BFk-sJ-AQa"/>
+                        <outlet property="textField" destination="Ioi-Pu-amL" id="eAG-48-UqB"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ZEy-jY-Lt5" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1823.2" y="447.52623688155927"/>
+        </scene>
+        <!--ScanQR Code View Controller-->
+        <scene sceneID="8Ny-OA-Ocz">
+            <objects>
+                <viewController id="TP3-GH-xfI" customClass="ScanQRCodeViewController" customModule="QRBot_Example" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="rCC-7V-m0N"/>
+                        <viewControllerLayoutGuide type="bottom" id="MRz-V8-ZVB"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="qLj-90-62O">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Oxx-1I-bnX" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1823.2" y="-249.62518740629687"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="g5p-1H-0gK">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="zWw-Kn-BYH" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="UIy-rR-SJ0">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="vXZ-lx-hvc" kind="relationship" relationship="rootViewController" id="nc0-at-mMH"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="pcP-Af-DQA" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-98" y="118"/>
         </scene>
     </scenes>
 </document>

@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'QRBot'
-  s.version          = '0.1.1'
+  s.version          = '0.2.0'
   s.summary          = 'QRBot, a QR Code Scanning and Generating library for iOS 9+, written in Swift 4.'
 
 # This description is used to generate tags and improve search results.

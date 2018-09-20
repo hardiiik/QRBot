@@ -13,6 +13,7 @@
 		68A15655AA1CB4625897D84F355BBAE9 /* Pods-QRBot_Tests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FD0A6F5276E35EAF09A9E0C61CF9AF3 /* Pods-QRBot_Tests-dummy.m */; };
 		A17367BC21536EC000B1A96A /* QRCodeScannerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A17367BA21536EC000B1A96A /* QRCodeScannerViewController.swift */; };
 		A17367BD21536EC000B1A96A /* QRCodeScannerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A17367BB21536EC000B1A96A /* QRCodeScannerDelegate.swift */; };
+		A17367C02153C6CC00B1A96A /* QRCode.swift in Sources */ = {isa = PBXBuildFile; fileRef = A17367BF2153C6CC00B1A96A /* QRCode.swift */; };
 		AF13CCE3DBB63B135413059E4497740E /* QRBot-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 6D59FA27AE521B63F23D6098EF9511FE /* QRBot-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		C68D8ADAACE2165EEC8B1004D4B5FF4B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5A16F4CFC63FAC439D7A04994F579A03 /* Foundation.framework */; };
 		D31828FDDCCFD5B771468DC5218720A2 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5A16F4CFC63FAC439D7A04994F579A03 /* Foundation.framework */; };
@@ -62,6 +63,7 @@
 		9FD0A6F5276E35EAF09A9E0C61CF9AF3 /* Pods-QRBot_Tests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-QRBot_Tests-dummy.m"; sourceTree = "<group>"; };
 		A17367BA21536EC000B1A96A /* QRCodeScannerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QRCodeScannerViewController.swift; sourceTree = "<group>"; };
 		A17367BB21536EC000B1A96A /* QRCodeScannerDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QRCodeScannerDelegate.swift; sourceTree = "<group>"; };
+		A17367BF2153C6CC00B1A96A /* QRCode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QRCode.swift; sourceTree = "<group>"; };
 		B8453984654CC4C503F6F7F0FEF33D01 /* QRBot-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "QRBot-dummy.m"; sourceTree = "<group>"; };
 		C41C87989182485DC7E14E21EBA55304 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C96781B90FF2882021BEB6283812AA42 /* Pods-QRBot_Tests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-QRBot_Tests-acknowledgements.markdown"; sourceTree = "<group>"; };
@@ -115,6 +117,7 @@
 		27400313D092E34A6FFB7DE5B0863E61 /* QRBot */ = {
 			isa = PBXGroup;
 			children = (
+				A17367BE2153C53B00B1A96A /* QRCodeGeneration */,
 				A17367B921536E9900B1A96A /* QRCodeScan */,
 				7207BACB18E51C65CB6FAFB271CDD438 /* Pod */,
 				30CDA33FD9AE23E9F715787458265D4B /* Support Files */,
@@ -210,6 +213,14 @@
 				A17367BA21536EC000B1A96A /* QRCodeScannerViewController.swift */,
 			);
 			path = QRCodeScan;
+			sourceTree = "<group>";
+		};
+		A17367BE2153C53B00B1A96A /* QRCodeGeneration */ = {
+			isa = PBXGroup;
+			children = (
+				A17367BF2153C6CC00B1A96A /* QRCode.swift */,
+			);
+			path = QRCodeGeneration;
 			sourceTree = "<group>";
 		};
 		BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */ = {
@@ -379,6 +390,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E1698779E08A0875979F592E23CB4268 /* QRBot-dummy.m in Sources */,
+				A17367C02153C6CC00B1A96A /* QRCode.swift in Sources */,
 				A17367BD21536EC000B1A96A /* QRCodeScannerDelegate.swift in Sources */,
 				A17367BC21536EC000B1A96A /* QRCodeScannerViewController.swift in Sources */,
 			);
