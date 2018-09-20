@@ -14,5 +14,5 @@ xcode_scheme: QRBot #4
 xcode_sdk: iphonesimulator11.2 #5
 
 script:
-- set -o pipefail && xcodebuild test -enableCodeCoverage YES -workspace Example/QRBot.xcworkspace -scheme QRBot-Example -sdk iphonesimulator9.3 ONLY_ACTIVE_ARCH=NO | xcpretty
-- pod lib lint
+- set -o pipefail && xcodebuild test -enableCodeCoverage YES -workspace Example/QRBot.xcworkspace -scheme QRBot-Example -sdk iphonesimulator11.2 ONLY_ACTIVE_ARCH=NO | xcpretty
+
