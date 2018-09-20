@@ -1,0 +1,11 @@
+use_frameworks!
+
+target 'QRBot_Example' do
+  pod 'QRBot', :path => '../'
+
+  target 'QRBot_Tests' do
+    inherit! :search_paths
+
+    
+  end
+end
