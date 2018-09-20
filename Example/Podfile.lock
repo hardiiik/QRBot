@@ -1,0 +1,16 @@
+PODS:
+  - QRBot (0.1.0)
+
+DEPENDENCIES:
+  - QRBot (from `../`)
+
+EXTERNAL SOURCES:
+  QRBot:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  QRBot: fd684ca96cf313b8bcadee72adb8af0931727f65
+
+PODFILE CHECKSUM: fcdbc862a2462d9e96879799328f90bad421c929
+
+COCOAPODS: 1.5.3

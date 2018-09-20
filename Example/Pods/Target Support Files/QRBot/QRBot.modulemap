@@ -1,0 +1,6 @@
+framework module QRBot {
+  umbrella header "QRBot-umbrella.h"
+
+  export *
+  module * { export * }
+}

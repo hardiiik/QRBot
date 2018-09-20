@@ -1,0 +1,6 @@
+framework module Pods_QRBot_Tests {
+  umbrella header "Pods-QRBot_Tests-umbrella.h"
+
+  export *
+  module * { export * }
+}

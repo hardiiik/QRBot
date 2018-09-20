@@ -7,18 +7,23 @@
 //
 
 import UIKit
+import QRBot
+import AVFoundation
 
-class ViewController: UIViewController {
+class ViewController: QRCodeScannerViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        print("Demo App : From viewDidLoad()")
+        scannerDelegate = self
     }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
+}
 
+extension ViewController: QRCodeScannerDelegate{
+    func scanner(_ connection: AVCaptureConnection, didOutput data: String) {
+        print("DemoApp : Data from QR Code - \(data)")
+        // Perform your actions here with data from QRCode
+    }
 }
 

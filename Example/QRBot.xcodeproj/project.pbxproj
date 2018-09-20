@@ -41,12 +41,12 @@
 		607FACEA1AFB9204008FA782 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		607FACEB1AFB9204008FA782 /* Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests.swift; sourceTree = "<group>"; };
 		72AB582B52428955376133AE /* Pods-QRBot_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-QRBot_Tests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-QRBot_Tests/Pods-QRBot_Tests.debug.xcconfig"; sourceTree = "<group>"; };
-		7AB402CA2D56BE8B8FDB1592 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; name = README.md; path = ../README.md; sourceTree = "<group>"; };
+		7AB402CA2D56BE8B8FDB1592 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
 		A02786FFC4991AFD44E78DED /* Pods_QRBot_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_QRBot_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		A298D917D1D31985604CD526 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
+		A298D917D1D31985604CD526 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
 		AC16EC9F45B8023ACE08A816 /* Pods_QRBot_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_QRBot_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E58F17AF3677C8D7733339FA /* Pods-QRBot_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-QRBot_Example.release.xcconfig"; path = "Pods/Target Support Files/Pods-QRBot_Example/Pods-QRBot_Example.release.xcconfig"; sourceTree = "<group>"; };
-		F7DDBE02E2353E8EE3F45FDF /* QRBot.podspec */ = {isa = PBXFileReference; includeInIndex = 1; name = QRBot.podspec; path = ../QRBot.podspec; sourceTree = "<group>"; };
+		F7DDBE02E2353E8EE3F45FDF /* QRBot.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = QRBot.podspec; path = ../QRBot.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -498,10 +498,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 72AB582B52428955376133AE /* Pods-QRBot_Tests.debug.xcconfig */;
 			buildSettings = {
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(inherited)",
-				);
+				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
 					"$(inherited)",
@@ -520,10 +517,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 2577B658FAC7DB190578115E /* Pods-QRBot_Tests.release.xcconfig */;
 			buildSettings = {
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(inherited)",
-				);
+				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 				INFOPLIST_FILE = Tests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.$(PRODUCT_NAME:rfc1034identifier)";
