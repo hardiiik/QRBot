@@ -22,7 +22,7 @@ pod 'QRBot'
 
 ## Author
 
-hardiiik, hardiktrivedi3008.ht@gmail.com
+Hardik Trivedi, hardiktrivedi3008.ht@gmail.com
 
 ## License
 
