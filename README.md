@@ -10,6 +10,7 @@
 To run the example project, clone the repo, and run `pod install` from the Example directory first.
 
 ## Requirements
+`iOS 8+`
 
 ## Installation
 
@@ -20,6 +21,9 @@ it, simply add the following line to your Podfile:
 pod 'QRBot'
 ```
 
+## Usage
+1. You need to give permission to access Camera in `Info.plist`.
+![Info.plist permission](QRBot/Assets/Info_plist.png)
 ## Author
 
 Hardik Trivedi, hardiktrivedi3008.ht@gmail.com
