@@ -25,7 +25,15 @@ Follow the steps to use QRBot:
 ![Info.plist permission](QRBot/Assets/Info_plist.png)
 
 2. Make `QRCodeScannerViewController` superclass of your ViewController class.
-For example, ` class YourViewController: QRCodeScannerViewController { ... } `.
+
+```swift
+ class ViewController: QRCodeScannerViewController {
+
+    override func viewDidLoad() {
+        super.viewDidLoad()
+    }
+ }
+```
 
 3. Conform/ Implement `QRCodeScannerDelegate` protocol and implement its method to perform your tasks.
 
@@ -40,7 +48,7 @@ For example, ` class YourViewController: QRCodeScannerViewController { ... } `.
 4. Set `scannerDelegate` property of your ViewController to `self`.
 
 ```swift
-class ViewController: QRCodeScannerViewController {
+ class ViewController: QRCodeScannerViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
