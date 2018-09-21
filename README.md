@@ -121,23 +121,31 @@ Follow the steps to use QRBot:
 
     1) Simple Black & White QR Code from your String data
     
-    ```swift QRCode.generate(from data: String, completion: @escaping (UIImage?,Error?) -> Void)```
+    ```swift 
+    QRCode.generate(from data: String, completion: @escaping (UIImage?,Error?) -> Void)
+    ```
     
     2) Simple Black & White QRCode from your String data, with Image format you wish
     
-    ```swift QRCode.generate(from data: String, imageFormat format: QRCodeImageFormat,completion: @escaping (UIImage?,Error?) -> Void)```
+    ```swift 
+    QRCode.generate(from data: String, imageFormat format: QRCodeImageFormat,completion: @escaping (UIImage?,Error?) -> Void)
+    ```
     
     Here, `QRCodeImageFormat` is enum having values like `.png`, `.jpg`, `.jpeg`, `.gif`.
     
     3) QRCode with different Pattern Colour and Background Colour
     
-    ```swift QRCode.generate(from data: String, patternColor color: QRCodeColor,backgroundColor bgcolor: QRCodeColor, completion: @escaping (UIImage?,Error?) -> Void)```
+    ```swift 
+    QRCode.generate(from data: String, patternColor color: QRCodeColor,backgroundColor bgcolor: QRCodeColor, completion: @escaping (UIImage?,Error?) -> Void)
+    ```
     
     Here, `QRCodeColor` is enum, having all colours from Apple Colour Pallete.
     
     4) QRCode with different Pattern Colour and Background Colour, with Image format you wish
     
-    ```swift QRCode.generate(from data: String, patternColor color: QRCodeColor,backgroundColor bgcolor: QRCodeColor, imageFormat format: QRCodeImageFormat, completion: @escaping (UIImage?,Error?) -> Void)```
+    ```swift
+    QRCode.generate(from data: String, patternColor color: QRCodeColor,backgroundColor bgcolor: QRCodeColor, imageFormat format: QRCodeImageFormat, completion: @escaping (UIImage?,Error?) -> Void)
+    ```
     
 ## Example
 
