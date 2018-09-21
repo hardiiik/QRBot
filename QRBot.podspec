@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'QRBot'
-  s.version          = '0.2.0'
+  s.version          = '0.2.1'
   s.summary          = 'QRBot, a QR Code Scanning and Generating library for iOS 9+, written in Swift 4.'
 
 # This description is used to generate tags and improve search results.
@@ -30,7 +30,7 @@ Pod::Spec.new do |s|
 
   s.ios.deployment_target = '8.0'
   s.swift_version = '4.0'
-  s.source_files = 'QRCodeScan/*.{swift}'
+  s.source_files = 'QRCodeScan/*.{swift}','QRCodeGeneration/*.swift'
   
   # s.resource_bundles = {
   #   'QRBot' => ['QRBot/Assets/*.png']
