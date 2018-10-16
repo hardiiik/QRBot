@@ -12,7 +12,7 @@ open class QRCodeScannerViewController: UIViewController {
 
     // MARK: - Variables for Camera preview and Code highlighting
     
-    var captureSession: AVCaptureSession?
+    var captureSession = AVCaptureSession()
     var videoPreviewLayer: AVCaptureVideoPreviewLayer?
     var qrCodeFrameView: UIView?
     
@@ -61,22 +61,22 @@ open class QRCodeScannerViewController: UIViewController {
         }
         do{
             let input = try AVCaptureDeviceInput(device: captureDevice)
-            captureSession?.addInput(input)
+            captureSession.addInput(input)
         }catch let error{
             print(error.localizedDescription)
             return
         }
         
         let captureMetadataOutput = AVCaptureMetadataOutput()
-        captureSession?.addOutput(captureMetadataOutput)
+        captureSession.addOutput(captureMetadataOutput)
         captureMetadataOutput.setMetadataObjectsDelegate(self, queue: DispatchQueue.main)
         captureMetadataOutput.metadataObjectTypes = [AVMetadataObject.ObjectType.qr]
         
-        videoPreviewLayer = AVCaptureVideoPreviewLayer(session: captureSession!)
+        videoPreviewLayer = AVCaptureVideoPreviewLayer(session: captureSession)
         videoPreviewLayer?.videoGravity = AVLayerVideoGravity.resizeAspectFill
         videoPreviewLayer?.frame = view.layer.bounds
         view.layer.addSublayer(videoPreviewLayer!)
-        captureSession?.startRunning()
+        captureSession.startRunning()
     }
     
     // MARK: - Navigation
